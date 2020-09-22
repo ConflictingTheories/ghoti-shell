@@ -1,0 +1,11 @@
+complete -c bzip2recover -x -a "(
+	__ghoti_complete_suffix .tbz
+	__ghoti_complete_suffix .tbz2
+)
+"
+
+complete -c bzip2recover -x -a "(
+	__ghoti_complete_suffix .bz
+	__ghoti_complete_suffix .bz2
+)
+"

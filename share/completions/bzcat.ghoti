@@ -1,0 +1,13 @@
+complete -c bzcat -x -a "(
+	__ghoti_complete_suffix .tbz
+	__ghoti_complete_suffix .tbz2
+)
+"
+
+complete -c bzcat -x -a "(
+	__ghoti_complete_suffix .bz
+	__ghoti_complete_suffix .bz2
+)
+"
+
+complete -c bzcat -s s -l small -d "Reduce memory usage"

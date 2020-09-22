@@ -1,0 +1,26 @@
+image: freebsd/latest
+packages:
+  - ncurses
+  - gcc
+  - gettext
+  - cmake
+  - gmake
+  - pcre2
+  - python
+  - py37-pexpect
+sources:
+  - https://git.sr.ht/~faho/ghoti
+tasks:
+  - build: |
+          cd ghoti
+          mkdir build || :
+          cd build
+          cmake .. \
+          -DCMAKE_INSTALL_PREFIX=/usr \
+          -DCMAKE_INSTALL_DATADIR=share \
+          -DCMAKE_INSTALL_DOCDIR=share/doc/ghoti \
+          -DCMAKE_INSTALL_SYSCONFDIR=/etc
+          gmake -j2
+  - test: |
+          cd ghoti/build
+          gmake test SHOW_INTERACTIVE_LOG=1

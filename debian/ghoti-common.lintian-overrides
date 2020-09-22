@@ -1,0 +1,4 @@
+# These directories are intentionally empty.
+ghoti-common: package-contains-empty-directory usr/share/ghoti/vendor_completions.d/
+ghoti-common: package-contains-empty-directory usr/share/ghoti/vendor_conf.d/
+ghoti-common: package-contains-empty-directory usr/share/ghoti/vendor_functions.d/

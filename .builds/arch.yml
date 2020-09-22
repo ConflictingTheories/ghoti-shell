@@ -1,0 +1,22 @@
+image: archlinux
+packages:
+  - cmake
+  - ninja
+  - python
+  - python-pexpect
+sources:
+  - https://git.sr.ht/~faho/ghoti
+tasks:
+  - build: |
+          cd ghoti
+          mkdir build || :
+          cd build
+          cmake -G Ninja .. \
+          -DCMAKE_INSTALL_PREFIX=/usr \
+          -DCMAKE_INSTALL_DATADIR=share \
+          -DCMAKE_INSTALL_DOCDIR=share/doc/ghoti \
+          -DCMAKE_INSTALL_SYSCONFDIR=/etc
+          ninja
+  - test: |
+          cd ghoti/build
+          env SHOW_INTERACTIVE_LOG=1 ninja test

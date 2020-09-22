@@ -1,0 +1,8 @@
+#RUN: %ghoti -C 'set -l ghoti %ghoti' %s
+# Test ALL THE ghoti FILES
+# in share/, that is - the tests are exempt because they contain syntax errors, on purpose
+
+for file in $__ghoti_data_dir/**.ghoti
+    $ghoti -n $file
+end
+# No output is good output

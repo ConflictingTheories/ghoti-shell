@@ -1,0 +1,1 @@
+complete -c xdvi -x -a "(__ghoti_complete_suffix .dvi)"

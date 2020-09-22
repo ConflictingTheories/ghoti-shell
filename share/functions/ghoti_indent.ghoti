@@ -1,0 +1,7 @@
+# check if command ghoti_indent works and is the same version that
+# came with this ghoti. This will happen one time.
+command -sq ghoti_indent
+and command ghoti_indent --version 2>&1 | string match -rq $version
+# if alias doesn't define the function here, this is an autoloaded "nothing".
+# the command (if there is one) will be used by default.
+or alias ghoti_indent=(string escape $__ghoti_bin_dir/ghoti_indent)

@@ -1,0 +1,6 @@
+# name: lonetwin
+# author: Steve
+
+function ghoti_prompt --description 'Write out the prompt'
+    echo -n -s "$USER" @ (prompt_hostname) ' ' (set_color $ghoti_color_cwd) (prompt_pwd) (ghoti_vcs_prompt) (set_color normal) '> '
+end

@@ -1,0 +1,4 @@
+# name: Just a Dollar
+function ghoti_prompt
+    echo -n '$ '
+end

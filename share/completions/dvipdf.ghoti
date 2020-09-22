@@ -1,0 +1,3 @@
+complete -c dvipdf -x -a "(
+           __ghoti_complete_suffix .dvi
+   )"
